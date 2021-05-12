@@ -3,10 +3,19 @@
 
 Node::Node(Tile* tile, Node* next)
 {
-   // TODO
+   // We shall implement a deep copy of Tile
+   this->tile = new Tile(tile->getColour(), tile->getShape());
+   this->next = next;
+}
+
+Node::~Node() {
+  //deleting tile
+  delete tile;
 }
 
 Node::Node(Node& other)
 {
-   // TODO
+   // Again, we are implementing a deep copy
+   this->tile = new Tile(*(other.tile));
+   this->next = other.next;
 }

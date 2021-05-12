@@ -9,9 +9,10 @@ public:
 
    Node(Tile* tile, Node* next);
    Node(Node& other);
+   ~Node(); //added a deconstructor
 
-   Tile*    tile;
-   Node*    next;
+   Tile* tile;
+   Node* next;
 };
 
 #endif // ASSIGN2_NODE_H
