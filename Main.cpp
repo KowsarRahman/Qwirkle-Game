@@ -27,11 +27,12 @@ int main(int argc, char** argv) {
 	// Initialise the program
 // This is a skeleton of the main menu for Robin to Implement.
 
-	// To make the menu always appear, a loop is used.
+	messages->displayMsg(1, "");
 
+	// To make the menu always appear, a loop is used.
 	while (isRunning) {
 		// Output menu
-		cout << menuTitle << endl;
+	cout << endl << menuTitle << endl;
 		for (int i = 0; i < menuSize; ++i) {
 		       cout << menuOptions[i] << endl;	
 		}
@@ -50,10 +51,20 @@ int main(int argc, char** argv) {
 			clearTerminal();
 			cout << "NEW GAME" << endl;
 			// TODO Call the new game function/method from here
-			}
+			
+			messages->displayMsg(2, "1");
+			//TODO input player 1
+
+			messages->displayMsg(2, "2");
+			//TODO input player 2
+			//
+			// Start Quirkle game...
+		}
 		else if (input == 2) {
 			clearTerminal();
 			cout << "LOAD GAME" << endl;
+			messages->displayMsg(5, "");
+			
 			// TODO Call the load game function/method from here
 		}
 		else if (input == 3) {

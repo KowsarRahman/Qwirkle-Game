@@ -12,6 +12,19 @@ using std::endl;
 string creditContents[] = {"Subham Kumar", "Kristian Oqueli Ambrose", "Kowsar Rahman", "Robin Singh Cheema"};
 int creditsSize = *(&creditContents + 1) - creditContents;
 
+string programMessages[] = {					// Message IDs
+	"0: DEBUG MESSAGE",					// 0
+	"Welcome to Quirkle!",					// 1
+	"Enter a name for player ",				// 2
+	"(Uppercase characters only!)",				// 3
+	"Let's play!",						// 4
+	"Enter the filename of the file you wish to load:",	// 5
+	"Quirkle game succesfully loaded"			// 6
+};
+int numOfMessages = *(&programMessages + 1) - programMessages;
+string msg = "";
+
+
 Messages::Messages() {
 	cout << "A Message class has been created" << endl;
 }
@@ -29,13 +42,22 @@ void Messages::credits() {
 
 // The function below gets a message ID (via it's pointer perhaps?) and prints it to the terminal.
 // It does not cout directly through here as the message may or may not need a new line, i.e. the message may need to be concatenated.
-void displayMsg(int messageID, string customMsg) {
+void Messages::displayMsg(int messageID, std::string customMsg) {
 	// First check if a custom message is passed:
-	if (messageID == 0) {
-		// Output message with ID 0
-	}
+	//for (string message : programMessages) {
+	if (customMsg.size() > 0) {
+		cout << findMsg(messageID) << customMsg << endl;
+		}
 	else {
-		// TODO return (print) the message of the id passed through here.
-		
+		cout << findMsg(messageID) << endl;
+	}	
+}
+
+string Messages::findMsg(int messageID) {
+	for (int i = 0; i < numOfMessages; ++i) {
+		if (messageID == i) {
+			msg = programMessages[i];
+		}
 	}
+	return msg;
 }

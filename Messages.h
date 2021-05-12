@@ -12,19 +12,19 @@ public:
 
 	// Functions and Methods
 	void credits();
+	void displayMsg(int, std::string);
 
 	// Variables and Constants
-	int displayMsg();
 	std::string msg01;
 
 
 private:
 	// Functions and Methods
 	void clearTerminal();
-	
+	std::string findMsg(int);
+
 	// Variables and constants
 	bool isRunning;
-	std::string menuTitle;
 	
 };
 #endif //MAIN_MENU
