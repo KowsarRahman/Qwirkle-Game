@@ -16,10 +16,12 @@ string programMessages[] = {					// Message IDs
 	"0: DEBUG MESSAGE",					// 0
 	"Welcome to Quirkle!",					// 1
 	"Enter a name for player ",				// 2
-	"(Uppercase characters only!)",				// 3
+	"(Max 10 characters and uppercase characters only!)",	// 3
 	"Let's play!",						// 4
 	"Enter the filename of the file you wish to load:",	// 5
 	"Quirkle game succesfully loaded"			// 6
+	"Error: The name you entered contains invalid characters!" // 7
+	"FATAL ERROR - An exception has been caught and has caused the program to stop." // 8	
 };
 int numOfMessages = *(&programMessages + 1) - programMessages;
 string msg = "";
