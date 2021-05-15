@@ -1,4 +1,3 @@
-
 #ifndef ASSIGN2_TILE_H
 #define ASSIGN2_TILE_H
 
@@ -10,8 +9,17 @@ typedef int Shape;
 
 class Tile {
 public:
-   Colour colour;
-   Shape  shape;
+	Tile(Colour colour, Shape shape);
+	
+	void setColour(char colour);
+	char getColour();
+
+	void setShape(int shape);
+	int getShape();
+
+private:
+	Colour colour;
+	Shape  shape;
 };
 
-#endif // ASSIGN2_TILE_H
+endif // ASSIGN2_TILE_H
