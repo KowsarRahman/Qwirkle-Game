@@ -17,6 +17,8 @@ public:
 	void setShape(int shape);
 	int getShape();
 
+	bool compareTile(Tile tileA, Tile tileB);
+
 private:
 	Colour colour;
 	Shape  shape;
