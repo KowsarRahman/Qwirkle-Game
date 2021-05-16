@@ -50,7 +50,7 @@ void Player::setPlayerName(std::string name) {
 }
 
 void Player::displayTileInHand() {
-  std::cout << hand->displayList() << std::endl;
+  std::cout << hand->displayLList() << std::endl;
 }
 
 void Player::clearPlayerHand() {

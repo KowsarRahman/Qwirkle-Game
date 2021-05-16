@@ -1,19 +1,36 @@
 #ifndef PLAYER
 #define PLAYER
 
+#include "LinkedList.h"
+#include <iostream>
+#include <string>
+class Player{
 public:
-	player(std::string name, int score, hand);
+	Player(int id, std::string name);
+    Player(int id, std::string name, LinkedList* newHand);
+    Player(std::string name);
+    ~Player();
 
-	void setName(std::string name);
-	std::string getName();
+    int getPlayerId();
+    std::string getPlayerName();
+    int getPlayerScore();
+    LinkedList* getPlayerHand();
 
-	void setScore(int score);
-	int getScore();
+    void setPlayerId(int id);
+    void setPlayerName(std::string name);
+    void setPlayerScore(int score);
+    void setUpPlayerScore(int score);
 
-	void updateHand( );
-
+    void displayTileInHand();
+    void clearPlayerHand(); 
 
 
 private:
 
+	int id;
+    std::string name;
+    int score;
+    LinkedList* hand;
+
+};
 #endif //PLAYER
