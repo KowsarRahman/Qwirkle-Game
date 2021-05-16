@@ -9,19 +9,33 @@ typedef int Shape;
 
 class Tile {
 public:
-	Tile(Colour colour, Shape shape);
-	
-	void setColour(char colour);
-	char getColour();
+   Tile(Colour c, Shape s);
+   Tile(const Tile &t);
+   Tile();
 
-	void setShape(int shape);
-	int getShape();
+   // Getters
+   Colour getColour();
+   Shape getShape();
 
-	bool compareTile(Tile tileA, Tile tileB);
+   // Setters
+   void setColour(Colour c);
+   void setShape(Shape s);
+
+   // compare 2 tiles
+   bool compareTile(Tile *tile);
+
+   bool isSameColour(const Tile &tile);
+   bool isSameShape(const Tile &tile);
+
+   // friend std::ostream &operator<<(std::ostream &out, const Tile &tile);
+   // Tile &operator=(const Tile &tile);
+   // friend bool operator==(const Tile &t1, const Tile &t2);
+
 
 private:
-	Colour colour;
-	Shape  shape;
+
+   Colour colour;
+   Shape shape;
 };
 
-endif // ASSIGN2_TILE_H
+#endif // ASSIGN2_TILE_H
