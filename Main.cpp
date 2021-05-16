@@ -74,9 +74,7 @@ int main(int argc, char** argv) {
 			// TODO Call the load game function/method from here
 		}
 		else if (menuInput == 3) {
-			clearTerminal();
-			cout << "CREDITS" << endl;
-			// TODO Call the credits function/method from here
+			clearTerminal();	
 			messages->credits();
 		}
 		// DEBUG OPTION, REMOVE IN FINAL SUBMISSION
