@@ -52,6 +52,7 @@ bool Tile::isSameColour(const Tile &tile) {
 bool Tile::isSameShape(const Tile &tile) {
   return shape == tile.shape;
 }
+// not sure what it is if u understand uncomment it
 
 // std::ostream &operator<<(std::ostream &out, const Tile &tile) {
 //   out << tile.colour << std::to_string(tile.shape);
